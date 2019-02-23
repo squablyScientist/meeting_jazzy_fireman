@@ -7,7 +7,8 @@ def playRandomFile():
     pygame.mixer.music.load(os.getcwd()[:-3] + "audio/" + file_name)
     pygame.mixer.music.play()
     time.sleep(5)
-    pygame.mixer.music.stop()
+    pygame.mixer.music.fadeout(3000)
+    time.sleep(3)
 
 
 playRandomFile()
